@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border:#e6f5fb;
+    outline:#e6f5fb;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;/* in order to make body in center*/
+    justify-content: center;
+    align-items: center;/* search box will be in center*/
+    background-image: url(https://tse2.mm.bing.net/th?id=OIP.LFQOFdr-9gXAQx0V2elZSgHaDt&pid=Api&P=0);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.container{
+    width: 400px;
+    height: min-content;/*min content means container will take space according to the content in it*/
+    background-color:aliceblue;
+    border-radius: 12px;
+    padding: 26px;
+}
+
+.search-box{
+    width: 100%;
+    height: min-content;
+    display: flex;/* we want to give space between search box and search icon so we are using flex and then min-content*/
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-box input{
+    width: 84%;
+    font-size: 20px;
+    text-transform:capitalize;
+    color:#000;
+    background-color:antiquewhite;
+    padding: 12px 16px;/*for setting top bottom width*/
+    border-radius: 14px;/*for making border corner round*/
+}
+
+.search-box input::placeholder{/* this for placeholder text i.e enter your location*/
+    color: #000;
+}
+
+.search-box button{
+    width: 46px;
+    height: 46px;
+    background-color:antiquewhite;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.search-box button:hover{/* in order to change the colour of the search button when er hover on it*/
+    color: #fff;
+    background-color:#e6f5fb;
+}
+/*above we have style our header*/
+.weather-body{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-block: 10px;
+    display: none;
+}
+.weather-body img{
+    width: 60%;
+}
+
+.weather-box{
+    margin-block: 20px;
+    text-align: center;
+}
+
+.weather-box .temperature{
+    font-size: 40px;
+    font-weight: 700;/* for bold purpose*/
+    position: relative;
+}
+
+.weather-box .temperature sup{/* styling my degree celcius*/
+    font-size: 20px;
+    position: absolute;
+    font-weight: 500;
+}
+
+.weather-box .description{
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.weather-details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;/* for equal space*/
+    margin-top: 35px;
+}
+
+.humidity, .wind{
+    display: flex;/* proper alignment between humidity icon and tex*/
+    align-items: center;
+}
+
+.humidity{
+    margin-left: 20px;
+}
+
+.wind{
+    margin-right: 20px;
+}
+
+.weather-details i{
+    font-size: 36px;
+}
+
+.weather-details .text{/* for giving space between icon and text*/
+    margin-left: 11px;
+    font-size: 17px;
+}
+
+.text span{/* 50% and 20km/H*/
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.location-not-found{
+    margin-top: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.location-not-found h1{
+    font-size: 20px;
+    color: #6b6b6b;
+    margin-block-end: 15px;
+}
+.location-not-found img{
+    width: 80%;
+}
